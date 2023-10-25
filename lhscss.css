@@ -1,0 +1,413 @@
+@charset "UTF-8";
+
+body {
+    font-family: Calibri, sans-serif;
+}
+
+.lhsContainer {
+    height: 768px;
+    text-align: center;
+}
+
+
+.fadeset{
+    opacity: 0;
+    transition: 0.3s;
+}
+
+
+  #outcomesButton path {
+    transition: all 0.5s;
+  }
+  
+  #outcomesButton {
+    cursor: pointer;
+  }
+  
+ #outcomesButton path {
+    transform: translate(-1px, 0px);
+  }
+  
+#outcomesButton:hover path {
+    transform: translate(3px, 0px);
+  }
+
+
+/* --------------------- fade for th popovers ------------------------- */
+.fadeInOut {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s, visibility 0.3s;
+
+    &.hidden {
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s, visibility 0.3s;
+    }
+}
+
+/* --------------------- Popover1 ------------------------- */
+
+#popover1 {
+    display: inline;
+}
+
+
+
+._1popoverH1 {
+    background-color: #003E74;
+    color: #fff;
+    width: fit-content;
+    padding: 2px 10px;
+    margin: 0;
+    border-radius: 5px 5px 0 0;
+    font-size: medium;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    float: right;
+
+
+  }
+  
+._1popoverbody {
+    border: #305799;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 5px 0 5px 5px;
+    background-color: #E7F4FF;
+    width: 200px;
+    margin: 0;
+    padding: 10px;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: inline-block;
+}
+
+._1popoverbody h2 {font-size: medium; color: #305799; padding: 0; margin: 0;}
+._1popoverbody p {font-size: small;  padding: 0; margin: 0;}
+
+#_1sliceButton path {
+    transition: all 0.5s;
+  }
+  
+  #_1sliceButton {
+    cursor: pointer;
+  }
+  
+ #_1sliceButton path {
+    transform: translate(0px, 0px);
+  }
+  
+#_1sliceButton:hover path {
+    transform: translate(-2px, -2px);
+  }
+
+#_1sliceButton {
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0));
+    transition: all 0.5s;
+}
+#_1sliceButton:hover {
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+}
+
+/* --------------------- Popover 2 ------------------------- */
+
+#popover2 {
+    display: block;
+}
+    
+
+._2popoverH1 {
+    background-color: #0b1225;
+    color: #fff;
+    width: fit-content;
+    padding: 2px 10px;
+    margin: 0;
+    border-radius: 5px 5px 0 0;
+    font-size: medium;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+  }
+  
+._2popoverbody {
+    border: #263e7f;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 0 5px 5px 5px;
+    background-color: #cbcfd9;
+    width: 200px;
+    margin: 0;
+    padding: 10px;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: inline-block;
+}
+
+._2popoverbody h2 {font-size: medium; color: #1b2c59; padding: 0; margin: 0;}
+._2popoverbody p {font-size: small;  padding: 0; margin: 0;}
+
+#_2sliceButton path {
+    transition: all 0.5s;
+  }
+  
+  #_2sliceButton {
+    cursor: pointer;
+  }
+  
+ #_2sliceButton path {
+    transform: translate(0px, 0px);
+  }
+  
+#_2sliceButton:hover path {
+    transform: translate(2px, -2px);
+  }
+
+#_2sliceButton {
+    filter: drop-shadow(-2px  5px 2px rgb(0 0 0 / 0));
+    transition: all 0.5s;
+}
+#_2sliceButton:hover {
+    filter: drop-shadow(-2px 5px 2px rgb(0 0 0 / 0.4));
+}
+
+/* --------------------- Popover3 ------------------------- */
+
+
+#popover3 {
+    display: block;
+}
+    
+
+._3popoverH1 {
+    background-color: #cc7628;
+    color: #fff;
+    width: fit-content;
+    padding: 2px 10px;
+    margin: 0;
+    border-radius: 5px 5px 0 0;
+    font-size: medium;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+  }
+  
+._3popoverbody {
+    border: #ff9433;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 0 5px 5px 5px;
+    background-color: #ffe8d5;
+    width: 200px;
+    margin: 0;
+    padding: 10px;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: inline-block;
+}
+
+._3popoverbody h2 {font-size: medium; color: #ec7d30; padding: 0; margin: 0;}
+._3popoverbody p {font-size: small;  padding: 0; margin: 0;}
+
+#_3sliceButton path {
+    transition: all 0.5s;
+  }
+  
+  #_3sliceButton {
+    cursor: pointer;
+  }
+  
+ #_3sliceButton path {
+    transform: translate(0px, 0px);
+  }
+  
+#_3sliceButton:hover path {
+    transform: translate(3px, -1px);
+  }
+
+#_3sliceButton {
+    filter: drop-shadow(-4px 1px 2px rgb(0 0 0 / 0));
+    transition: all 0.5s;
+}
+#_3sliceButton:hover {
+    filter: drop-shadow(-4px 1px 2px rgb(0 0 0 / 0.4));
+}
+
+/* --------------------- Popover4 ------------------------- */
+
+
+#popover4 {
+    display: block;
+}
+    
+
+._4popoverH1 {
+    background-color: #cc7628;
+    color: #fff;
+    width: fit-content;
+    padding: 2px 10px;
+    margin: 0;
+    border-radius: 5px 5px 0 0;
+    font-size: medium;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+  }
+  
+._4popoverbody {
+    border: #ff9433;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 0 5px 5px 5px;
+    background-color: #ffe8d5;
+    width: 200px;
+    margin: 0;
+    padding: 10px;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: inline-block;
+}
+
+._4popoverbody h2 {font-size: medium; color: #ec7d30; padding: 0; margin: 0;}
+._4popoverbody p {font-size: small;  padding: 0; margin: 0;}
+
+#_4sliceButton path {
+    transition: all 0.5s;
+  }
+  
+  #_4sliceButton {
+    cursor: pointer;
+  }
+  
+ #_4sliceButton path {
+    transform: translate(0px, 0px);
+  }
+  
+#_4sliceButton:hover path {
+    transform: translate(1px, 3px);
+  }
+
+#_4sliceButton {
+    filter: drop-shadow(0 -3px 2px rgb(0 0 0 / 0));
+    transition: all 0.5s;
+}
+#_4sliceButton:hover {
+    filter: drop-shadow(0 -3px 2px rgb(0 0 0 / 0.4));
+}
+
+/* --------------------- Popover5 ------------------------- */
+
+#popover5 {
+    display: inline;
+}
+
+
+
+._5popoverH1 {
+    background-color: #4e7a30;
+    color: #fff;
+    width: fit-content;
+    padding: 2px 10px;
+    margin: 0;
+    border-radius: 5px 5px 0 0;
+    font-size: medium;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    float: right;
+
+
+  }
+  
+._5popoverbody {
+    border: #88d354;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 5px 0 5px 5px;
+    background-color: #f1ffea;
+    width: 200px;
+    margin: 0;
+    padding: 10px;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: inline-block;
+}
+
+._5popoverbody h2 {font-size: medium; color: #70ad45; padding: 0; margin: 0;}
+._5popoverbody p {font-size: small;  padding: 0; margin: 0;}
+
+#_5sliceButton path {
+    transition: all 0.5s;
+  }
+  
+  #_5sliceButton {
+    cursor: pointer;
+  }
+  
+ #_5sliceButton path {
+    transform: translate(0px, 0px);
+  }
+  
+#_5sliceButton:hover path {
+    transform: translate(-2px, 3px);
+  }
+
+#_5sliceButton {
+    filter: drop-shadow(0 -3px 2px rgb(0 0 0 / 0));
+    transition: all 0.5s;
+}
+#_5sliceButton:hover {
+    filter: drop-shadow(0 -3px 2px rgb(0 0 0 / 0.4));
+}
+
+/* --------------------- Popover6 ------------------------- */
+
+#popover6 {
+    display: inline;
+}
+
+
+
+._6popoverH1 {
+    background-color: #4e7a30;
+    color: #fff;
+    width: fit-content;
+    padding: 2px 10px;
+    margin: 0;
+    border-radius: 5px 5px 0 0;
+    font-size: medium;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    float: right;
+
+
+  }
+  
+._6popoverbody {
+    border: #88d354;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 5px 0 5px 5px;
+    background-color: #f1ffea;
+    width: 200px;
+    margin: 0;
+    padding: 10px;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: inline-block;
+}
+
+._6popoverbody h2 {font-size: medium; color: #70ad45; padding: 0; margin: 0;}
+._6popoverbody p {font-size: small;  padding: 0; margin: 0;}
+
+#_6sliceButton path {
+    transition: all 0.5s;
+  }
+  
+  #_6sliceButton {
+    cursor: pointer;
+  }
+  
+ #_6sliceButton path {
+    transform: translate(0px, 0px);
+  }
+  
+#_6sliceButton:hover path {
+    transform: translate(-3px, 1px);
+  }
+
+#_6sliceButton {
+    filter: drop-shadow(3px 0 2px rgb(0 0 0 / 0));
+    transition: all 0.5s;
+}
+#_6sliceButton:hover {
+    filter: drop-shadow(3px 0 2px rgb(0 0 0 / 0.4));
+}
+
