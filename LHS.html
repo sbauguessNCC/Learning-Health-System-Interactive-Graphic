@@ -94,13 +94,36 @@
       }
     }
 
+    .popoverNumber {
+      display: block;
+      float: right;
+      background-color: #fff;
+      width: 20px;
+      height: 20px;
+      font-family: Calibri, sans-serif;
+      border-radius: 10px;
+      text-align: center;
+      font-weight:700;
+    }
+    .popoverLightBlueText {
+      color: #305799;
+    }
+    .popoverDarkBlueText {
+      color: #1b2c59;
+    }
+    .popoverOrangeText {
+      color: #ec7d30;
+    }
+    .popoverGreenText {
+      color: #70ad45;
+    }
+  
+
     /* --------------------- Popover1 ------------------------- */
 
     #popover1 {
       display: inline;
     }
-
-
 
     ._1popoverH1 {
       background-color: #003E74;
@@ -112,8 +135,6 @@
       font-size: medium;
       box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       float: right;
-
-
     }
 
     ._1popoverbody {
@@ -191,7 +212,7 @@
       border-width: 2px;
       border-style: solid;
       border-radius: 0 5px 5px 5px;
-      background-color: #cbcfd9;
+      background-color: #dadee5;
       width: 200px;
       margin: 0;
       padding: 10px;
@@ -406,7 +427,7 @@
       border-width: 2px;
       border-style: solid;
       border-radius: 5px 0 5px 5px;
-      background-color: #f1ffea;
+      background-color: #e4efdc;
       width: 200px;
       margin: 0;
       padding: 10px;
@@ -479,7 +500,7 @@
       border-width: 2px;
       border-style: solid;
       border-radius: 5px 0 5px 5px;
-      background-color: #f1ffea;
+      background-color: #e4efdc;
       width: 200px;
       margin: 0;
       padding: 10px;
@@ -1127,6 +1148,7 @@
         <h1 class="_1popoverH1">Evidence</h1>
       </div>
       <div class="_1popoverbody">
+        <div class="popoverNumber popoverLightBlueText">1</div>
         <h2>Research, Payer & Public Health Surveillance
         </h2>
         <p>Digitally sourced health outcomes data are accessible and interoperable. They empower health services research, incentive structure refinement, and public health monitoring activities.
@@ -1139,6 +1161,7 @@
         <h1 class="_2popoverH1">Knowledge</h1>
       </div>
       <div class="_2popoverbody">
+        <div class="popoverNumber popoverDarkBlueText">2</div>
         <h2>Guidelines & Clinical Decisions Support
         </h2>
         <p>Findings from analyzed digital quality measurement data inform best practices for providers across the nation.
@@ -1152,8 +1175,10 @@
         <h1 class="_3popoverH1">Action</h1>
       </div>
       <div class="_3popoverbody">
+        <div class="popoverNumber popoverOrangeText">3</div>
         <h2>Clinical Care
         </h2>
+        
         <p>When aligned with best practices informed by digital quality measurement, improvements in clinical care can be implemented in real time. A digital approach to quality measurement increases the speed and connection providers have to valuable data.
         </p>
       </div>
@@ -1165,6 +1190,7 @@
         <h1 class="_4popoverH1">Action</h1>
       </div>
       <div class="_4popoverbody">
+        <div class="popoverNumber popoverOrangeText">4</div>
         <h2>Quality Improvement
 
         </h2>
@@ -1179,6 +1205,7 @@
         <h1 class="_5popoverH1">Data</h1>
       </div>
       <div class="_5popoverbody">
+        <div class="popoverNumber popoverGreenText">5</div>
         <h2>Measurement Analytics
         </h2>
         <p>Digital data is also used for quality improvement activities, analytics, and measurement to improve patient care.
@@ -1192,6 +1219,7 @@
         <h1 class="_6popoverH1">Data</h1>
       </div>
       <div class="_6popoverbody">
+        <div class="popoverNumber popoverGreenText">6</div>
         <h2>Reporting
         </h2>
         <p>Quality measurement reporting via digital quality measurement advances CMS's goal of supporting delivery of high-quality care, using the same data elements that support interoperability, quality improvement, clinical decision support, research, public health, etc.
