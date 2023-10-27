@@ -237,6 +237,8 @@
 
     #_2sliceButton:hover {
       filter: drop-shadow(-2px 5px 2px rgb(0 0 0 / 0.4));
+      filter: url(drop-shadow.svg#drop-shadow);
+
     }
 
     /* --------------------- Popover3 ------------------------- */
@@ -950,6 +952,16 @@
           <linearGradient id="linear-gradient-7" x1="587.43" y1="414.97" x2="676.52" y2="466.41" xlink:href="#linear-gradient-3"/>
           <linearGradient id="linear-gradient-8" x1="393.39" y1="298.07" x2="482.48" y2="349.5" xlink:href="#linear-gradient-3"/>
           <linearGradient id="linear-gradient-9" x1="393.39" y1="414.97" x2="482.48" y2="466.41" xlink:href="#linear-gradient-3"/>
+          <filter id="drop-shadow">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="2.2"/>
+            <feOffset dx="1" dy="4" result="offsetblur"/>
+            <feFlood flood-color="rgba(0,0,0,0.9)"/>
+            <feComposite in2="offsetblur" operator="in"/>
+            <feMerge>
+              <feMergeNode/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
         </defs>
         <g id="outcomesPopout" class="fadeset" onmousemove="showonhover()" onmouseout="hideonhover()">
           <g>
