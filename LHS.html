@@ -231,7 +231,7 @@
     }
 
     #_2sliceButton {
-      filter: drop-shadow(-2px 5px 2px rgb(0 0 0 / 0));
+      filter: url(#shadowsafarioff);
       transition: all 0.5s;
     }
 
@@ -952,6 +952,9 @@
           <linearGradient id="linear-gradient-9" x1="393.39" y1="414.97" x2="482.48" y2="466.41" xlink:href="#linear-gradient-3"/>
           <filter id='shadowsafari' color-interpolation-filters="sRGB">
             <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.5"/>
+          </filter>
+          <filter id='shadowsafarioff' color-interpolation-filters="sRGB">
+            <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0"/>
           </filter>
         </defs>
         <g id="outcomesPopout" class="fadeset" onmousemove="showonhover()" onmouseout="hideonhover()">
