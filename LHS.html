@@ -1227,4 +1227,19 @@ function hideDiscription5(){var popover5=document.getElementById("popover5");pop
 function showDiscription6(evt){let popover6=document.getElementById("popover6");popover6.classList.remove('hidden');popover6.style.left=evt.pageX-250+'px';popover6.style.top=evt.pageY+15+'px'}
 function hideDiscription6(){var popover6=document.getElementById("popover6");popover6.classList.add('hidden')}
 </script>
+
+<!--
+  NOTE: if Using JQuery on the page and the popovers are not showin in the correct locaion you can use the folloing 
+  script>
+    jQuery(document).ready(function(){
+        jQuery('#popover1').appendTo("body");
+        jQuery('#popover2').appendTo("body");
+        jQuery('#popover3').appendTo("body");
+        jQuery('#popover4').appendTo("body");
+        jQuery('#popover5').appendTo("body");
+        jQuery('#popover6').appendTo("body");
+    });
+</script>
+
+-->
 </html>
