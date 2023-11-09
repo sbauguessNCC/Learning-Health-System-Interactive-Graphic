@@ -526,8 +526,6 @@
 </head>
 
 <body>
-  <div>
-
     <svg class="lhsContainer" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1093.71 695.13">
         <defs>
           <style>.cls-1,.cls-2,.cls-3,.cls-4,.cls-5,.cls-6,.cls-7,.cls-8,.cls-9,.cls-10,.cls-11,.cls-12,.cls-13,.cls-14,.cls-15,.cls-16{stroke-miterlimit:10}.cls-1,.cls-3,.cls-5,.cls-6,.cls-11,.cls-12,.cls-16{stroke:#fff}.cls-1,.cls-6,.cls-16{stroke-width:2px}.cls-1,.cls-17,.cls-12,.cls-18{fill:#305698}.cls-19,.cls-20,.cls-21,.cls-22,.cls-23,.cls-24,.cls-25,.cls-26,.cls-27,.cls-28,.cls-29,.cls-30,.cls-31,.cls-32,.cls-33,.cls-34,.cls-35,.cls-36,.cls-37,.cls-38,.cls-39,.cls-40,.cls-41,.cls-42,.cls-43,.cls-44,.cls-45,.cls-46,.cls-47,.cls-48,.cls-49,.cls-50,.cls-51,.cls-52,.cls-53,.cls-54,.cls-55,.cls-18{stroke-width:0}.cls-19,.cls-56,.cls-3,.cls-6{fill:#ec7d30}.cls-20{fill:#bbbdbf}.cls-57{letter-spacing:0em}.cls-2{fill:#fee8a9;stroke:#fed664;stroke-width:3.04px}.cls-58{letter-spacing:0em}.cls-59{letter-spacing:-.01em}.cls-21{fill:url(#linear-gradient)}.cls-56{font-size:22.24px}.cls-56,.cls-60,.cls-61,.cls-17,.cls-62,.cls-63,.cls-63-large,.cls-64,.cls-65{font-weight:700}.cls-56,.cls-61,.cls-17,.cls-62,.cls-63,.cls-63-large,.cls-64,.cls-65{font-family:Calibri-Bold,Calibri}.cls-22{fill:#e4efdc}.cls-23{fill:#402312}.cls-66{letter-spacing:0em}.cls-24{fill:#c1cce0}.cls-60{fill:#808184;font-family:Calibri-BoldItalic,Calibri;font-size:17.41px}.cls-60,.cls-67{font-style:italic}.cls-4{fill:url(#linear-gradient-4)}.cls-4,.cls-8,.cls-9,.cls-10,.cls-13,.cls-14,.cls-15{stroke:#ccc}.cls-25{fill:#6488a7}.cls-68{letter-spacing:-.03em}.cls-69{letter-spacing:-.02em}.cls-70{letter-spacing:-.01em}.cls-71{letter-spacing:-.01em}.cls-26{fill:#e6e7e8}.cls-5,.cls-64,.cls-55{fill:#70ad45}.cls-27{fill:#ab8357}.cls-72{letter-spacing:-.04em}.cls-73{letter-spacing:-.01em}.cls-74{letter-spacing:-.01em}.cls-75{letter-spacing:-.01em}.cls-61,.cls-29,.cls-11,.cls-16{fill:#1b2c59}.cls-61,.cls-17,.cls-64{font-size:22.24px}.cls-30{fill:#577892}.cls-76{letter-spacing:0em}.cls-31{fill:#fff7e0}.cls-77{letter-spacing:0em}.cls-78{letter-spacing:0em}.cls-32{fill:#eec6b0}.cls-79{letter-spacing:-.01em}.cls-33{fill:#b3b2b3}.cls-34{fill:#00a89c}.cls-80{letter-spacing:-.04em}.cls-35{fill:#e2b49c}.cls-81{letter-spacing:0em}.cls-36{fill:#333}.cls-7{fill:none;stroke:#a6a8ab;stroke-dasharray:0 0 0 9;stroke-linecap:round;stroke-width:4px}.cls-82{letter-spacing:-.01em}.cls-8{fill:url(#linear-gradient-9)}.cls-62{font-size:14.82px}.cls-83{letter-spacing:0em}.cls-84{letter-spacing:0em}.cls-37{fill:#fdc010}.cls-85{letter-spacing:-.01em}.cls-38,.cls-44{fill:#fff}.cls-39{fill:#e9cac5}.cls-67{font-family:Calibri-Italic,Calibri}.cls-67,.cls-86{font-size:13.3px}.cls-40{fill:#fed664}.cls-87{letter-spacing:0em}.cls-88{letter-spacing:-.02em}.cls-41{fill:#dcdbdb}.cls-42{fill:#a36d35}.cls-43{fill:url(#linear-gradient-2)}.cls-9{fill:url(#linear-gradient-5)}.cls-10{fill:url(#linear-gradient-6)}.cls-44{fill-rule:evenodd}.cls-45{fill:#9fbed8}.cls-46{fill:#f1f1f2}.cls-47{fill:#a6a8ab}.cls-48{fill:#fcbf10}.cls-49{fill:#74945e}.cls-89{letter-spacing:-.02em}.cls-86{font-family:Calibri,Calibri}.cls-13{fill:url(#linear-gradient-3)}.cls-63{font-size:16px}.cls-63-large{font-size:18px}.cls-50{fill:#cbcfd9}.cls-14{fill:url(#linear-gradient-7)}.cls-65{font-size:15.52px}.cls-51{fill:#979797}.cls-90{letter-spacing:0em}.cls-91{letter-spacing:-.01em}.cls-92{letter-spacing:0em}.cls-52{fill:#da8d27}.cls-15{fill:url(#linear-gradient-8)}.cls-53{fill:#fbe2d2}.cls-94{letter-spacing:-.01em}.cls-54{fill:#eebcb3}.cls-95{letter-spacing:-.01em}.cls-96{letter-spacing:0em}.cls-97{letter-spacing:-.01em}</style>
@@ -1212,8 +1210,10 @@
   </div>
 </body>
 <script>
+// These functions are for the Oucomes popout
 function showonhover(){outcomesPopout.style.opacity="1"}
 function hideonhover(){outcomesPopout.style.opacity="0"}
+// These functions are for the Popovers, each resures cusome spacing so they each have a seprate function
 function showDiscription1(evt){let popover1=document.getElementById("popover1");popover1.classList.remove('hidden');popover1.style.left=evt.pageX-250+'px';popover1.style.top=evt.pageY+15+'px'}
 function hideDiscription1(){var popover1=document.getElementById("popover1");popover1.classList.add('hidden')}
 function showDiscription2(evt){let popover2=document.getElementById("popover2");popover2.classList.remove('hidden');popover2.style.left=evt.pageX+15+'px';popover2.style.top=evt.pageY+15+'px'}
@@ -1226,20 +1226,12 @@ function showDiscription5(evt){let popover5=document.getElementById("popover5");
 function hideDiscription5(){var popover5=document.getElementById("popover5");popover5.classList.add('hidden')}
 function showDiscription6(evt){let popover6=document.getElementById("popover6");popover6.classList.remove('hidden');popover6.style.left=evt.pageX-250+'px';popover6.style.top=evt.pageY+15+'px'}
 function hideDiscription6(){var popover6=document.getElementById("popover6");popover6.classList.add('hidden')}
-</script>
-
-<!--
-  NOTE: if Using JQuery on the page and the popovers are not showin in the correct locaion you can use the folloing 
-  script>
-    jQuery(document).ready(function(){
-        jQuery('#popover1').appendTo("body");
-        jQuery('#popover2').appendTo("body");
-        jQuery('#popover3').appendTo("body");
-        jQuery('#popover4').appendTo("body");
-        jQuery('#popover5').appendTo("body");
-        jQuery('#popover6').appendTo("body");
+// This is used incsase the code is copied to another page. It is needed to make the pageX and PageY reference the body of the html. without it the popup might not appear in the correct locaion. 
+document.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll("#popover1, #popover2, #popover3, #popover4, #popover5, #popover6").forEach(function(element) {
+        document.body.appendChild(element);
     });
-</script>
+});
 
--->
+</script>
 </html>
