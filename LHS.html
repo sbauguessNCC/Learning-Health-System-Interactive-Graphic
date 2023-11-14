@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LHS Graphic</title>
   <style>
-    /* --------------------- LHS code ------------------------- */
     /* latin */
     @font-face {
       font-family: 'Calibri';
@@ -43,49 +42,31 @@
       unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
     }
 
-
-    body {
-      font-family: Calibri, sans-serif;
-    }
-
     .lhsContainer {
       width: 950px;
       text-align: center;
+      font-family: Calibri, sans-serif;
+      display: flex;
+      margin: auto;
     }
-
-    .fadeset {
-      opacity: 0;
-      transition: 0.5s;
-    }
-
+    #outcomesButton {
+        cursor: pointer;
+      }
     #outcomesButton path {
       transition: all 0.5s;
-    }
-
-    #outcomesButton {
-      cursor: pointer;
-    }
-
-    #outcomesButton path {
       transform: translate(-1px, 0px);
     }
-
     #outcomesButton:hover path {
       transform: translate(3px, 0px);
     }
-
     /* --------------------- fade for th popovers ------------------------- */
     .fadeInOut {
-      visibility: visible;
-      opacity: 1;
       transition: opacity 0.3s, visibility 0.3s;
-
-      &.hidden {
+    }
+    .hidden {
         visibility: hidden;
         opacity: 0;
-        transition: opacity 0.3s, visibility 0.3s;
       }
-    }
 
     .popoverNumber {
       display: block;
@@ -114,15 +95,14 @@
     .popoverGreenText {
       color: #70ad45;
     }
-
-    /* --------------------- Popover1 ------------------------- */
-
-    #popover1 {
-      display: inline;
+    
+    .popoverStyle {
+      position: absolute; 
+      display: flexbox;
+      font-family: Calibri, sans-serif;
     }
 
-    ._1popoverH1 {
-      background-color: #003E74;
+    .popoverStyle h1 {
       color: #fff;
       width: fit-content;
       padding: 2px 10px;
@@ -130,45 +110,50 @@
       border-radius: 5px 5px 0 0;
       font-size: medium;
       box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      float: right;
     }
 
-    ._1popoverbody {
-      border: #305799;
+    .popoverStyle .popoverBodyStyle{
       border-width: 2px;
       border-style: solid;
-      border-radius: 5px 0 5px 5px;
-      background-color: #E7F4FF;
-      width: 220px;
+      width: 222px;
       margin: 0;
       padding: 10px;
       box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       display: inline-block;
     }
 
-    ._1popoverbody h2 {
+    .popoverStyle h2{
       font-size: medium;
-      color: #305799;
       padding: 0;
       margin: 0;
     }
 
-    ._1popoverbody p {
+    .popoverStyle p {
       font-size: small;
       padding: 0;
       margin: 0;
     }
 
-    #_1sliceButton path {
-      transition: all 0.5s;
+    /* --------------------- Popover1 ------------------------- */
+
+    .popoverStyle ._1popoverH1 {
+      background-color: #003E74;
+      margin-left: auto;
     }
 
-    #_1sliceButton {
-      cursor: pointer;
+    ._1popoverbody {
+      border: #305799;
+      border-radius: 5px 0 5px 5px;
+      background-color: #E7F4FF;
+    }
+
+    ._1popoverbody h2 {
+      color: #305799;
     }
 
     #_1sliceButton path {
       transform: translate(0px, 0px);
+      transition: all 0.5s;
     }
 
     #_1sliceButton:hover path {
@@ -176,6 +161,7 @@
     }
 
     #_1sliceButton {
+      cursor: pointer;
       filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0));
       transition: all 0.5s;
     }
@@ -185,59 +171,24 @@
     }
 
     /* --------------------- Popover 2 ------------------------- */
-
-    #popover2 {
-      display: block;
-    }
-
+  
     ._2popoverH1 {
       background-color: #0b1225;
-      color: #fff;
-      width: fit-content;
-      padding: 2px 10px;
-      margin: 0;
-      border-radius: 5px 5px 0 0;
-      font-size: medium;
-      box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
     }
 
     ._2popoverbody {
       border: #263e7f;
-      border-width: 2px;
-      border-style: solid;
       border-radius: 0 5px 5px 5px;
       background-color: #dadee5;
-      width: 220px;
-      margin: 0;
-      padding: 10px;
-      box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      display: inline-block;
     }
 
     ._2popoverbody h2 {
-      font-size: medium;
       color: #1b2c59;
-      padding: 0;
-      margin: 0;
-    }
-
-    ._2popoverbody p {
-      font-size: small;
-      padding: 0;
-      margin: 0;
-    }
-
-    #_2sliceButton path {
-      transition: all 0.5s;
-    }
-
-    #_2sliceButton {
-      cursor: pointer;
     }
 
     #_2sliceButton path {
       transform: translate(0px, 0px);
+      transition: all 0.5s;
     }
 
     #_2sliceButton:hover path {
@@ -245,6 +196,7 @@
     }
 
     #_2sliceButton {
+      cursor: pointer;
       filter: drop-shadow(-2px 5px 2px rgb(0 0 0 / 0));
       transition: all 0.5s;
     }
@@ -255,57 +207,23 @@
 
     /* --------------------- Popover3 ------------------------- */
 
-    #popover3 {
-      display: block;
-    }
-
-    ._3popoverH1 {
+     ._3popoverH1 {
       background-color: #cc7628;
-      color: #fff;
-      width: fit-content;
-      padding: 2px 10px;
-      margin: 0;
-      border-radius: 5px 5px 0 0;
-      font-size: medium;
-      box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 
     ._3popoverbody {
       border: #ff9433;
-      border-width: 2px;
-      border-style: solid;
       border-radius: 0 5px 5px 5px;
       background-color: #ffe8d5;
-      width: 220px;
-      margin: 0;
-      padding: 10px;
-      box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      display: inline-block;
     }
 
     ._3popoverbody h2 {
-      font-size: medium;
       color: #ec7d30;
-      padding: 0;
-      margin: 0;
-    }
-
-    ._3popoverbody p {
-      font-size: small;
-      padding: 0;
-      margin: 0;
-    }
-
-    #_3sliceButton path {
-      transition: all 0.5s;
-    }
-
-    #_3sliceButton {
-      cursor: pointer;
     }
 
     #_3sliceButton path {
       transform: translate(0px, 0px);
+      transition: all 0.5s;
     }
 
     #_3sliceButton:hover path {
@@ -313,6 +231,7 @@
     }
 
     #_3sliceButton {
+      cursor: pointer;
       filter: drop-shadow(-4px 1px 2px rgb(0 0 0 / 0));
       transition: all 0.5s;
     }
@@ -323,57 +242,23 @@
 
     /* --------------------- Popover4 ------------------------- */
 
-    #popover4 {
-      display: block;
-    }
-
     ._4popoverH1 {
       background-color: #cc7628;
-      color: #fff;
-      width: fit-content;
-      padding: 2px 10px;
-      margin: 0;
-      border-radius: 5px 5px 0 0;
-      font-size: medium;
-      box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 
     ._4popoverbody {
       border: #ff9433;
-      border-width: 2px;
-      border-style: solid;
       border-radius: 0 5px 5px 5px;
       background-color: #ffe8d5;
-      width: 220px;
-      margin: 0;
-      padding: 10px;
-      box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      display: inline-block;
     }
 
     ._4popoverbody h2 {
-      font-size: medium;
       color: #ec7d30;
-      padding: 0;
-      margin: 0;
-    }
-
-    ._4popoverbody p {
-      font-size: small;
-      padding: 0;
-      margin: 0;
-    }
-
-    #_4sliceButton path {
-      transition: all 0.5s;
-    }
-
-    #_4sliceButton {
-      cursor: pointer;
     }
 
     #_4sliceButton path {
       transform: translate(0px, 0px);
+      transition: all 0.5s;
     }
 
     #_4sliceButton:hover path {
@@ -381,6 +266,7 @@
     }
 
     #_4sliceButton {
+      cursor: pointer;
       filter: drop-shadow(0 -3px 2px rgb(0 0 0 / 0));
       transition: all 0.5s;
     }
@@ -391,58 +277,24 @@
 
     /* --------------------- Popover5 ------------------------- */
 
-    #popover5 {
-      display: inline;
-    }
-
-    ._5popoverH1 {
+    .popoverStyle ._5popoverH1 {
       background-color: #4e7a30;
-      color: #fff;
-      width: fit-content;
-      padding: 2px 10px;
-      margin: 0;
-      border-radius: 5px 5px 0 0;
-      font-size: medium;
-      box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      float: right;
+      margin-left: auto;
     }
 
     ._5popoverbody {
       border: #88d354;
-      border-width: 2px;
-      border-style: solid;
       border-radius: 5px 0 5px 5px;
       background-color: #e4efdc;
-      width: 220px;
-      margin: 0;
-      padding: 10px;
-      box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      display: inline-block;
     }
 
     ._5popoverbody h2 {
-      font-size: medium;
       color: #70ad45;
-      padding: 0;
-      margin: 0;
-    }
-
-    ._5popoverbody p {
-      font-size: small;
-      padding: 0;
-      margin: 0;
-    }
-
-    #_5sliceButton path {
-      transition: all 0.5s;
-    }
-
-    #_5sliceButton {
-      cursor: pointer;
     }
 
     #_5sliceButton path {
       transform: translate(0px, 0px);
+      transition: all 0.5s;
     }
 
     #_5sliceButton:hover path {
@@ -450,6 +302,7 @@
     }
 
     #_5sliceButton {
+      cursor: pointer;
       filter: drop-shadow(0 -3px 2px rgb(0 0 0 / 0));
       transition: all 0.5s;
     }
@@ -460,58 +313,24 @@
 
     /* --------------------- Popover6 ------------------------- */
 
-    #popover6 {
-      display: inline;
-    }
-
-    ._6popoverH1 {
+    .popoverStyle ._6popoverH1 {
       background-color: #4e7a30;
-      color: #fff;
-      width: fit-content;
-      padding: 2px 10px;
-      margin: 0;
-      border-radius: 5px 5px 0 0;
-      font-size: medium;
-      box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      float: right;
+      margin-left: auto;
     }
 
     ._6popoverbody {
       border: #88d354;
-      border-width: 2px;
-      border-style: solid;
       border-radius: 5px 0 5px 5px;
       background-color: #e4efdc;
-      width: 220px;
-      margin: 0;
-      padding: 10px;
-      box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      display: inline-block;
     }
 
     ._6popoverbody h2 {
-      font-size: medium;
       color: #70ad45;
-      padding: 0;
-      margin: 0;
-    }
-
-    ._6popoverbody p {
-      font-size: small;
-      padding: 0;
-      margin: 0;
-    }
-
-    #_6sliceButton path {
-      transition: all 0.5s;
-    }
-
-    #_6sliceButton {
-      cursor: pointer;
     }
 
     #_6sliceButton path {
       transform: translate(0px, 0px);
+      transition: all 0.5s;
     }
 
     #_6sliceButton:hover path {
@@ -519,6 +338,7 @@
     }
 
     #_6sliceButton {
+      cursor: pointer;
       filter: drop-shadow(3px 0 2px rgb(0 0 0 / 0));
       transition: all 0.5s;
     }
@@ -530,7 +350,8 @@
 </head>
 
 <body>
-  <svg class="lhsContainer" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1093.71 695.13">
+  <div class="lhsContainer">
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1093.71 695.13">
     <defs>
       <style>.cls-1,.cls-2,.cls-3,.cls-4,.cls-5,.cls-6,.cls-7,.cls-8,.cls-9,.cls-10,.cls-11,.cls-12,.cls-13,.cls-14,.cls-15,.cls-16{stroke-miterlimit:10}.cls-1,.cls-3,.cls-5,.cls-6,.cls-11,.cls-12,.cls-16{stroke:#fff}.cls-1,.cls-6,.cls-16{stroke-width:2px}.cls-1,.cls-17,.cls-12,.cls-18{fill:#305698}.cls-19,.cls-20,.cls-21,.cls-22,.cls-23,.cls-24,.cls-25,.cls-26,.cls-27,.cls-28,.cls-29,.cls-30,.cls-31,.cls-32,.cls-33,.cls-34,.cls-35,.cls-36,.cls-37,.cls-38,.cls-39,.cls-40,.cls-41,.cls-42,.cls-43,.cls-44,.cls-45,.cls-46,.cls-47,.cls-48,.cls-49,.cls-50,.cls-51,.cls-52,.cls-53,.cls-54,.cls-55,.cls-18{stroke-width:0}.cls-19,.cls-56,.cls-3,.cls-6{fill:#ec7d30}.cls-20{fill:#bbbdbf}.cls-57{letter-spacing:0em}.cls-2{fill:#fee8a9;stroke:#fed664;stroke-width:3.04px}.cls-58{letter-spacing:0em}.cls-59{letter-spacing:-.01em}.cls-21{fill:url(#linear-gradient)}.cls-56{font-size:22.24px}.cls-56,.cls-60,.cls-61,.cls-17,.cls-62,.cls-63,.cls-63-large,.cls-64,.cls-65{font-weight:700}.cls-56,.cls-61,.cls-17,.cls-62,.cls-63,.cls-63-large,.cls-64,.cls-65{font-family:Calibri-Bold,Calibri}.cls-22{fill:#e4efdc}.cls-23{fill:#402312}.cls-66{letter-spacing:0em}.cls-24{fill:#c1cce0}.cls-60{fill:#808184;font-family:Calibri-BoldItalic,Calibri;font-size:17.41px}.cls-60,.cls-67{font-style:italic}.cls-4{fill:url(#linear-gradient-4)}.cls-4,.cls-8,.cls-9,.cls-10,.cls-13,.cls-14,.cls-15{stroke:#ccc}.cls-25{fill:#6488a7}.cls-68{letter-spacing:-.03em}.cls-69{letter-spacing:-.02em}.cls-70{letter-spacing:-.01em}.cls-71{letter-spacing:-.01em}.cls-26{fill:#e6e7e8}.cls-5,.cls-64,.cls-55{fill:#70ad45}.cls-27{fill:#ab8357}.cls-72{letter-spacing:-.04em}.cls-73{letter-spacing:-.01em}.cls-74{letter-spacing:-.01em}.cls-75{letter-spacing:-.01em}.cls-61,.cls-29,.cls-11,.cls-16{fill:#1b2c59}.cls-61,.cls-17,.cls-64{font-size:22.24px}.cls-30{fill:#577892}.cls-76{letter-spacing:0em}.cls-31{fill:#fff7e0}.cls-77{letter-spacing:0em}.cls-78{letter-spacing:0em}.cls-32{fill:#eec6b0}.cls-79{letter-spacing:-.01em}.cls-33{fill:#b3b2b3}.cls-34{fill:#00a89c}.cls-80{letter-spacing:-.04em}.cls-35{fill:#e2b49c}.cls-81{letter-spacing:0em}.cls-36{fill:#333}.cls-7{fill:none;stroke:#a6a8ab;stroke-dasharray:0 0 0 9;stroke-linecap:round;stroke-width:4px}.cls-82{letter-spacing:-.01em}.cls-8{fill:url(#linear-gradient-9)}.cls-62{font-size:14.82px}.cls-83{letter-spacing:0em}.cls-84{letter-spacing:0em}.cls-37{fill:#fdc010}.cls-85{letter-spacing:-.01em}.cls-38,.cls-44{fill:#fff}.cls-39{fill:#e9cac5}.cls-67{font-family:Calibri-Italic,Calibri}.cls-67,.cls-86{font-size:13.3px}.cls-40{fill:#fed664}.cls-87{letter-spacing:0em}.cls-88{letter-spacing:-.02em}.cls-41{fill:#dcdbdb}.cls-42{fill:#a36d35}.cls-43{fill:url(#linear-gradient-2)}.cls-9{fill:url(#linear-gradient-5)}.cls-10{fill:url(#linear-gradient-6)}.cls-44{fill-rule:evenodd}.cls-45{fill:#9fbed8}.cls-46{fill:#f1f1f2}.cls-47{fill:#a6a8ab}.cls-48{fill:#fcbf10}.cls-49{fill:#74945e}.cls-89{letter-spacing:-.02em}.cls-86{font-family:Calibri,Calibri}.cls-13{fill:url(#linear-gradient-3)}.cls-63{font-size:16px}.cls-63-large{font-size:18px}.cls-50{fill:#cbcfd9}.cls-14{fill:url(#linear-gradient-7)}.cls-65{font-size:15.52px}.cls-51{fill:#979797}.cls-90{letter-spacing:0em}.cls-91{letter-spacing:-.01em}.cls-92{letter-spacing:0em}.cls-52{fill:#da8d27}.cls-15{fill:url(#linear-gradient-8)}.cls-53{fill:#fbe2d2}.cls-94{letter-spacing:-.01em}.cls-54{fill:#eebcb3}.cls-95{letter-spacing:-.01em}.cls-96{letter-spacing:0em}.cls-97{letter-spacing:-.01em}</style>
       <linearGradient id="linear-gradient" x1="712.21" y1="389.13" x2="926.51" y2="389.13" gradientUnits="userSpaceOnUse">
@@ -552,7 +373,7 @@
       <linearGradient id="linear-gradient-8" x1="393.39" y1="298.07" x2="482.48" y2="349.5" xlink:href="#linear-gradient-3"/>
       <linearGradient id="linear-gradient-9" x1="393.39" y1="414.97" x2="482.48" y2="466.41" xlink:href="#linear-gradient-3"/>
     </defs>
-    <g id="outcomesPopout" class="fadeset" onmousemove="showonhover()" onmouseout="hideonhover()">
+    <g id="outcomesPopout" class="fadeInOut hidden">
       <g>
         <path class="cls-21" d="m893.89,181.88c-62.79,15.98-122.18-13.53-157.22-37,65.38,56.99,106.7,140.88,106.7,234.42,0,104.45-51.51,196.87-130.52,253.24-.22.28-.44.56-.65.83,28.19-20.1,96.28-62.22,178.18-49.85,13,1.96,25.05,5.1,36.12,8.96V169.31c-11.47,6.03-22.47,9.99-32.61,12.57Z" />
         <g>
@@ -698,7 +519,7 @@
         </g>
       </g>
     </g>
-    <g id="outcomesButton" onmousemove="showonhover()" onmouseout="hideonhover()">
+    <g id="outcomesButton">
       <g>
         <path class="cls-43" d="m910.87,371.24c-35.22-50.66-105.66-151.99-105.66-151.99l1.75,316.99s69.28-110,103.91-165Z" />
         <g style="pointer-events: none;">
@@ -981,7 +802,7 @@
         </text>
       </g>
     </g>
-    <g id="_6sliceButton" data-name="6sliceButton">
+    <g id="_6sliceButton">
       <g>
         <path class="cls-55" d="m360.85,381.44c0-15.19,1.95-29.94,5.61-44l-73.16-19.6c-5.4,20.56-8.14,41.9-8.14,63.43s2.83,43.54,8.4,64.4c5.59,20.98,13.95,41.17,24.85,60,5.01,8.68,10.61,17.14,16.66,25.15l60.05-45.55c-21.52-29.05-34.27-64.98-34.27-103.83Z" />
         <g style="pointer-events: none;">
@@ -996,7 +817,7 @@
         </g>
       </g>
     </g>
-    <g id="_5sliceButton" data-name="5sliceButton">
+    <g id="_5sliceButton">
       <g>
         <path class="cls-55" d="m396.32,486.87l-60.04,45.54c5.65,7.4,11.78,14.53,18.21,21.21,16.24,16.91,34.74,31.42,54.99,43.11,18.81,10.88,39,19.24,60,24.85,20.54,5.49,41.86,8.31,63.39,8.4v-73.76c-55.69-.88-105.13-27.92-136.55-69.35Z" />
         <g style="pointer-events: none;">
@@ -1024,7 +845,7 @@
         </g>
       </g>
     </g>
-    <g id="_4sliceButton" data-name="4sliceButton">
+    <g id="_4sliceButton">
       <g>
         <path class="cls-19" d="m673.09,489.38c-32.04,40.7-81.73,66.87-137.42,66.87-.27,0-.53,0-.8-.01v73.73c21.52-.08,42.84-2.91,63.4-8.4,21-5.61,41.19-13.97,60-24.85,18.77-10.84,36.1-24.15,51.51-39.56,7.43-7.42,14.43-15.37,20.83-23.64l-57.53-44.16Z" />
         <g style="pointer-events: none;">
@@ -1051,7 +872,7 @@
         </g>
       </g>
     </g>
-    <g id="_3sliceButton" data-name="3sliceButton">
+    <g id="_3sliceButton">
       <g>
         <path class="cls-19" d="m774.45,317.84l-69.82,18.71c3.81,14.33,5.85,29.38,5.85,44.89,0,39.99-13.5,76.87-36.18,106.36l57.53,44.16c6.33-8.3,12.22-17.13,17.51-26.28,10.9-18.86,19.26-39.05,24.85-60.01,5.57-20.86,8.4-42.53,8.4-64.4s-2.74-42.86-8.14-63.43Z" />
         <g style="pointer-events: none;">
@@ -1070,7 +891,7 @@
         </g>
       </g>
     </g>
-    <g id="_2sliceButton" data-name="2sliceButton">
+    <g id="_2sliceButton">
       <g>
         <path class="cls-29" d="m535.67,206.62c80.18,0,147.92,54.26,168.44,128l69.83-18.71c-5.58-20.61-13.85-40.47-24.59-59.04-10.85-18.78-24.16-36.11-39.56-51.52-15.39-15.39-32.72-28.7-51.51-39.56-18.84-10.89-39.03-19.24-60.01-24.84-20.54-5.49-41.87-8.32-63.4-8.41v74.09c.27,0,.53-.01.8-.01Z" />
         <g style="pointer-events: none;">
@@ -1113,7 +934,7 @@
         </g>
       </g>
     </g>
-    <g id="_1sliceButton" data-name="1sliceButton">
+    <g id="_1sliceButton">
       <g>
         <path class="cls-18" d="m532.87,206.66v-74.11c-21.54.08-42.86,2.91-63.39,8.41-20.99,5.59-41.18,13.95-60.01,24.84-18.81,10.87-36.14,24.18-51.51,39.57-15.41,15.41-28.72,32.74-39.56,51.52-10.73,18.54-19,38.39-24.59,59.03l73.16,19.61c19.99-73.32,86.61-127.6,165.89-128.86Z" />
         <g style="pointer-events: none;">
@@ -1238,7 +1059,7 @@
         </text>
       </g>
     </g>
-    <g id="_6icon" data-name="6icon" style="pointer-events: none;">
+    <g id="_6icon" style="pointer-events: none;">
       <g>
         <circle class="cls-5" cx="361.59" cy="403.29" r="21.83" />
         <g>
@@ -1250,25 +1071,25 @@
         </g>
       </g>
     </g>
-    <g id="_5icon" data-name="5icon" style="pointer-events: none;">
+    <g id="_5icon" style="pointer-events: none;">
       <g>
         <circle class="cls-5" cx="454.39" cy="529.53" r="21.83" />
         <path class="cls-38" d="m462.12,517.08c-1.31,0-2.39,1.08-2.39,2.39,0,.31.06.6.17.87l-3.96,2.72c-.42-.36-.95-.59-1.54-.59-.81,0-1.53.41-1.97,1.04l-3.38-1.3s.01-.07.01-.11c0-1.31-1.08-2.39-2.4-2.39s-2.39,1.08-2.39,2.39,1.08,2.4,2.39,2.4c.7,0,1.33-.31,1.77-.8l3.59,1.38c.11,1.21,1.13,2.18,2.37,2.18,1.31,0,2.39-1.08,2.39-2.4,0-.14-.02-.27-.04-.41l4.22-2.9c.35.2.74.32,1.16.32,1.31,0,2.4-1.08,2.4-2.4s-1.08-2.39-2.4-2.39h0Zm0,1.6c.45,0,.79.34.79.79s-.35.79-.79.79-.79-.35-.79-.79.34-.79.79-.79Zm-15.46,2.63c.45,0,.79.34.79.79s-.35.79-.79.79-.79-.35-.79-.79.35-.79.79-.79Zm7.73,2.76c.45,0,.79.34.79.79s-.34.79-.79.79-.79-.35-.79-.79.35-.79.79-.79Zm5.95.28c-.44,0-.8.36-.8.8v12.71h-2.58v-7.17c0-.44-.36-.8-.8-.8h-3.55s-.06,0-.08,0c-.41.04-.72.39-.72.8v7.17h-2.57v-9.94c0-.44-.36-.8-.8-.8h-3.55c-.44,0-.8.36-.8.8v9.94h-1.71s-.06,0-.08,0c-.44.03-.77.42-.74.86.03.43.39.76.82.74h24.04c.44,0,.81-.34.82-.78s-.34-.81-.78-.82c-.01,0-.02,0-.04,0h-1.72v-12.71c0-.44-.36-.8-.8-.8h-3.56Zm.8,1.6h1.95v11.91h-1.95v-11.91Zm-15.46,2.77h1.95v9.14h-1.95v-9.14Zm7.73,2.77h1.95v6.37h-1.95v-6.37Z" />
       </g>
     </g>
-    <g id="_4icon" data-name="4icon" style="pointer-events: none;">
+    <g id="_4icon" style="pointer-events: none;">
       <g>
         <circle class="cls-3" cx="613.48" cy="529.53" r="21.83" />
         <path class="cls-38" d="m604.24,513.85c-.33.03-.61.34-.61.68v28.39c0,.35.32.68.68.68h20.28c.35,0,.68-.32.68-.68v-23.66c0-.18-.07-.36-.2-.49l-4.73-4.73c-.13-.12-.3-.19-.48-.19-5.2,0-10.41,0-15.61,0Zm.74,1.35h14.2v4.06c0,.35.32.68.68.68h4.06v22.31h-18.93v-27.04Zm15.55.95l2.43,2.43h-2.43v-2.43Zm-8.2,4.45c-.15.02-.29.09-.39.2l-2.9,2.9-1.55-1.55c-.25-.26-.71-.26-.97,0-.25.25-.24.72.01.97l2.03,2.03c.25.25.7.25.95,0l3.38-3.38c.21-.2.27-.53.15-.79-.12-.26-.42-.42-.71-.38Zm2.11,2.38c-.37,0-.68.3-.68.68s.3.68.68.68h7.44c.37,0,.68-.3.68-.68s-.3-.68-.68-.68h-7.44Zm-2.11,4.38c-.15.02-.29.09-.39.2l-2.9,2.9-1.55-1.55c-.25-.26-.71-.26-.97,0-.25.25-.24.72.01.97l2.03,2.03c.25.25.7.25.95,0l3.38-3.38c.21-.2.27-.53.15-.79s-.42-.42-.71-.38Zm2.11,2.38c-.37,0-.68.3-.68.68s.3.68.68.68h7.44c.37,0,.68-.3.68-.68s-.3-.68-.68-.68h-7.44Zm-2.11,4.38c-.15.02-.29.09-.39.2l-2.9,2.9-1.55-1.55c-.25-.26-.71-.26-.97,0s-.24.72.01.97l2.03,2.03c.25.25.7.25.95,0l3.38-3.38c.21-.2.27-.53.15-.79s-.42-.42-.71-.38Zm2.11,2.38c-.37,0-.68.3-.68.68s.3.68.68.68h7.44c.37,0,.68-.3.68-.68s-.3-.68-.68-.68h-7.44Z" />
       </g>
     </g>
-    <g id="_3icon" data-name="3icon" style="pointer-events: none;">
+    <g id="_3icon" style="pointer-events: none;">
       <g>
         <circle class="cls-3" cx="705.74" cy="403.29" r="21.83" />
         <path class="cls-38" d="m715.07,410.57h-7.09v-6.28c3.44-.69,6.46-2.76,8.33-5.73,1.49-2.58,1.44-5.76-.13-8.29v-1.51c0-1.39-1.13-2.52-2.52-2.52s-2.52,1.13-2.52,2.52,1.13,2.52,2.52,2.52h1.16c1.18,1.98,1.19,4.45.04,6.44-1.71,2.71-4.53,4.53-7.71,4.96-3.18-.43-6-2.24-7.71-4.96-1.16-2-1.14-4.46.03-6.44h1.16c1.39,0,2.52-1.13,2.52-2.52s-1.13-2.52-2.52-2.52-2.52,1.13-2.52,2.52v1.5c-1.57,2.53-1.62,5.72-.13,8.3,1.87,2.97,4.88,5.04,8.32,5.72v6.29h-10.6c-1.17,0-2.11-.95-2.12-2.12v-1.41c2.11-.46,3.45-2.55,2.98-4.66-.46-2.11-2.55-3.45-4.66-2.98-2.11.46-3.45,2.55-2.98,4.66.33,1.49,1.49,2.66,2.98,2.98v1.41c0,2.1,1.7,3.79,3.79,3.8h10.6v2.12c0,2.1,1.7,3.79,3.8,3.8h4.98c2.1-.04,3.76-1.78,3.72-3.88-.04-2.04-1.68-3.67-3.72-3.72Zm-2.26-21.81c0-.46.38-.84.84-.84s.84.38.84.84v.84h-.84c-.46,0-.84-.38-.84-.84Zm-13.03,0c0-.46.38-.84.84-.84s.84.38.84.84-.38.84-.84.84h-.84v-.84Zm-9.28,14.47c0-1.23,1-2.24,2.23-2.24s2.24,1,2.24,2.23c0,1.23-1,2.24-2.23,2.24h0c-1.23,0-2.23-1-2.23-2.23Zm24.56,13.27h-4.98c-1.17,0-2.12-.95-2.12-2.12v-2.12h7.09c1.17.03,2.09,1.01,2.06,2.18-.03,1.12-.94,2.03-2.06,2.06h0Zm-22.33-12.39c-.48,0-.87-.39-.87-.87,0-.48.39-.87.87-.87.48,0,.87.39.87.87,0,.48-.39.87-.86.87h0Z" />
       </g>
     </g>
-    <g id="_2icon" data-name="2icon" style="pointer-events: none;">
+    <g id="_2icon" style="pointer-events: none;">
       <g>
         <g id="_2iconBG" data-name="2iconBG">
           <circle class="cls-11" cx="619.28" cy="243.14" r="21.83" />
@@ -1276,7 +1097,7 @@
         <path class="cls-38" d="m632.76,235.31h-2.02v-2.02c0-.37-.3-.67-.67-.67h-8.09c-1.06,0-2.06.51-2.7,1.37-.63-.86-1.63-1.37-2.7-1.37h-8.09c-.37,0-.67.3-.67.67v2.02h-2.02c-.37,0-.67.3-.67.67v16.17c0,.37.3.67.67.67h26.96c.37,0,.67-.3.67-.67v-16.17c0-.37-.3-.67-.67-.67Zm-10.78-1.35h7.41v14.83h-7.41c-.73,0-1.44.25-2.02.69v-13.5c0-1.12.91-2.02,2.02-2.02Zm-12.8,0h7.41c1.12,0,2.02.91,2.02,2.02v13.5c-.58-.45-1.29-.69-2.02-.69h-7.41v-14.83Zm-2.7,2.7h1.35v12.8c0,.37.3.67.67.67h8.09c.85,0,1.61.54,1.9,1.35h-12.01v-14.83Zm25.61,14.83h-12.01c.28-.8,1.04-1.34,1.9-1.35h8.09c.37,0,.67-.3.67-.67v-12.8h1.35v14.83Zm-20.89-12.13h5.39c.37,0,.67-.3.67-.67v-2.7c0-.37-.3-.67-.67-.67h-5.39c-.37,0-.67.3-.67.67v2.7c0,.37.3.67.67.67Zm.67-2.7h4.04v1.35h-4.04v-1.35Zm-1.35,4.72c0-.37.3-.67.67-.67h5.39c.37,0,.67.3.67.67s-.3.67-.67.67h-5.39c-.37,0-.67-.3-.67-.67Zm0,2.7c0-.37.3-.67.67-.67h5.39c.37,0,.67.3.67.67s-.3.67-.67.67h-5.39c-.37,0-.67-.3-.67-.67Zm0,2.7c0-.37.3-.67.67-.67h5.39c.37,0,.67.3.67.67s-.3.67-.67.67h-5.39c-.37,0-.67-.3-.67-.67Zm10.78-5.39c0-.37.3-.67.67-.67h5.39c.37,0,.67.3.67.67s-.3.67-.67.67h-5.39c-.37,0-.67-.3-.67-.67Zm0,2.7c0-.37.3-.67.67-.67h5.39c.37,0,.67.3.67.67s-.3.67-.67.67h-5.39c-.37,0-.67-.3-.67-.67Zm0-8.09c0-.37.3-.67.67-.67h5.39c.37,0,.67.3.67.67s-.3.67-.67.67h-5.39c-.37,0-.67-.3-.67-.67Zm0,2.7c0-.37.3-.67.67-.67h5.39c.37,0,.67.3.67.67s-.3.67-.67.67h-5.39c-.37,0-.67-.3-.67-.67Zm0,8.09c0-.37.3-.67.67-.67h5.39c.37,0,.67.3.67.67s-.3.67-.67.67h-5.39c-.37,0-.67-.3-.67-.67Z" />
       </g>
     </g>
-    <g id="_1icon" data-name="1icon" style="pointer-events: none;">
+    <g id="_1icon" style="pointer-events: none;">
       <g>
         <circle class="cls-12" cx="446.65" cy="243.22" r="21.83" />
         <path class="cls-44" d="m456.57,256.99c-.48,0-.94-.19-1.28-.53l-8.7-8.7c-1.51.83-3.21,1.27-4.94,1.27-2.74,0-5.31-1.06-7.24-3-1.93-1.93-3-4.5-3-7.24s1.06-5.31,3-7.24c1.93-1.93,4.5-3,7.24-3s5.31,1.06,7.24,3c.8.8,1.46,1.72,1.96,2.73l.94-.94c-.12-.29-.18-.59-.18-.9,0-1.28,1.04-2.33,2.33-2.33s2.33,1.04,2.33,2.33-1.04,2.33-2.33,2.33c-.31,0-.62-.06-.9-.18l-1.5,1.5c.7,2.56.37,5.33-.91,7.65l8.7,8.7c.7.71.7,1.85,0,2.56l-1.47,1.46c-.34.34-.8.53-1.28.53Zm-.19-1.63s.11.08.19.08.13-.03.18-.08l1.46-1.46c.05-.05.08-.11.08-.18s-.03-.14-.08-.18l-5.53-5.53c-.28.33-.57.65-.87.96-.31.31-.63.6-.96.88l5.53,5.53Zm-6.63-6.63c.34-.28.66-.57.96-.87.31-.31.6-.63.87-.96l-.37-.37c-.27.34-.56.66-.87.96-.31.31-.63.6-.96.87l.37.37Zm-8.11-18.63c-2.32,0-4.5.9-6.14,2.54-1.64,1.64-2.54,3.82-2.54,6.14s.9,4.5,2.54,6.14c1.64,1.64,3.82,2.54,6.14,2.54s4.5-.9,6.14-2.54c1.99-1.99,2.88-4.79,2.43-7.55l-1.4,1.4c.12.29.18.59.18.9,0,1.28-1.04,2.33-2.33,2.33s-2.33-1.04-2.33-2.33c0-.31.06-.62.18-.9l-2.13-2.13c-.29.12-.59.18-.9.18s-.62-.06-.9-.18l-2.13,2.13c.12.29.18.59.18.9,0,1.28-1.04,2.33-2.33,2.33s-2.33-1.04-2.33-2.33,1.04-2.33,2.33-2.33c.31,0,.62.06.9.18l2.13-2.13c-.12-.29-.18-.59-.18-.9,0-1.28,1.04-2.33,2.33-2.33s2.33,1.04,2.33,2.33c0,.31-.06.62-.18.9l2.13,2.13c.29-.12.59-.18.9-.18s.62.06.9.18l2.09-2.09c-.43-1.05-1.07-1.99-1.88-2.8-1.64-1.64-3.82-2.54-6.14-2.54Zm6.64,17.16c.34-.27.67-.56.97-.86.31-.31.6-.63.86-.97l-.37-.37c-.26.34-.55.67-.86.98-.31.31-.63.6-.97.86l.37.37Zm-1.6-8.36c-.43,0-.78.35-.78.78s.35.78.78.78.78-.35.78-.78-.35-.78-.78-.78Zm-10.35,0c-.43,0-.78.35-.78.78s.35.78.78.78.78-.35.78-.78-.35-.78-.78-.78Zm5.18-5.18c-.43,0-.78.35-.78.78s.35.78.78.78.78-.35.78-.78-.35-.78-.78-.78Zm12.42-2.07c-.43,0-.78.35-.78.78s.35.78.78.78.78-.35.78-.78-.35-.78-.78-.78Zm-12.28,15.14c-.59,0-1.17-.06-1.75-.19-.55-.12-1.1-.31-1.62-.55-.19-.09-.33-.24-.4-.44-.07-.2-.06-.41.03-.59.13-.27.4-.45.7-.45.11,0,.22.02.33.07.41.19.85.34,1.3.44.46.1.94.16,1.41.16.43,0,.87-.04,1.29-.13l.15-.02c.37,0,.69.26.76.62.08.42-.19.83-.61.91-.52.11-1.06.16-1.6.16h0Z" />
@@ -1314,99 +1135,82 @@
       </text>
     </g>
   </svg>
-
+  
   <!--Popover 1-->
-  <div id="popover1" class="fadeInOut hidden" style="position: absolute; display: block;">
-    <div style="display: block;">
-      <h1 class="_1popoverH1">Evidence</h1>
-    </div>
-    <div class="_1popoverbody">
+  <div id="popover1" class="popoverStyle fadeInOut hidden">
+    <h1 class="_1popoverH1">Evidence</h1>
+    <div class="popoverBodyStyle _1popoverbody">
       <div class="popoverNumber popoverLightBlueText">1</div>
-      <h2>Research, Payer & Public Health Surveillance
-      </h2>
-      <p>Digital data are accessible and interoperable. They provide information for health services research initiatives, pay for performance programs, and public health monitoring activities.
-
-      </p>
+      <h2>Research, Payer & Public Health Surveillance</h2>
+      <p>Digital data are accessible and interoperable. They provide information for health services research initiatives, pay for performance programs, and public health monitoring activities.</p>
     </div>
   </div>
 
   <!--Popover 2-->
-  <div id="popover2" class="fadeInOut hidden" style="position: absolute; display: block;">
-    <div>
-      <h1 class="_2popoverH1">Knowledge</h1>
-    </div>
-    <div class="_2popoverbody">
+  <div id="popover2" class="popoverStyle fadeInOut hidden">
+    <h1 class="_2popoverH1">Knowledge</h1>
+    <div class="popoverBodyStyle _2popoverbody">
       <div class="popoverNumber popoverDarkBlueText">2</div>
-      <h2>Guidelines & Clinical Decisions Support
-      </h2>
-      <p>Digital quality measures are informed by clinical guidelines and often indicate if they are being followed. Capturing digital quality measurement data through care delivery and routine administrative processes enables rapid-cycle feedback and continuous improvement.
-
-      </p>
+      <h2>Guidelines & Clinical Decisions Support</h2>
+      <p>Digital quality measures are informed by clinical guidelines and often indicate if they are being followed. Capturing digital quality measurement data through care delivery and routine administrative processes enables rapid-cycle feedback and continuous improvement.</p>
     </div>
   </div>
 
   <!--Popover 3-->
-  <div id="popover3" class="fadeInOut hidden" style="position: absolute; display: block;">
-    <div>
-      <h1 class="_3popoverH1">Action</h1>
-    </div>
-    <div class="_3popoverbody">
+  <div id="popover3" class="popoverStyle fadeInOut hidden">
+    <h1 class="_3popoverH1">Action</h1>
+    <div class="popoverBodyStyle _3popoverbody">
       <div class="popoverNumber popoverOrangeText">3</div>
       <h2>Clinical Care
       </h2>
-
-      <p>When aligned with best practices informed by digital quality measurement, improvements in clinical care can be implemented in real-time. A digital approach to quality measurement increases the speed and connection providers have to valuable data.
-
-      </p>
+      <p>When aligned with best practices informed by digital quality measurement, improvements in clinical care can be implemented in real-time. A digital approach to quality measurement increases the speed and connection providers have to valuable data.</p>
     </div>
   </div>
 
   <!--Popover 4-->
-  <div id="popover4" class="fadeInOut hidden" style="position: absolute; display: block;">
-    <div>
+  <div id="popover4" class="popoverStyle fadeInOut hidden">
       <h1 class="_4popoverH1">Action</h1>
-    </div>
-    <div class="_4popoverbody">
+    <div class="popoverBodyStyle _4popoverbody">
       <div class="popoverNumber popoverOrangeText">4</div>
-      <h2>Quality Improvement
-      </h2>
-      <p>Using digital quality measurement, the efficacy, equity, and efficiency of care can be assessed in a timely manner. This supports the continuous refinement of patient care.
-      </p>
+      <h2>Quality Improvement</h2>
+      <p>Using digital quality measurement, the efficacy, equity, and efficiency of care can be assessed in a timely manner. This supports the continuous refinement of patient care.</p>
     </div>
   </div>
 
   <!--Popover 5-->
-  <div id="popover5" class="fadeInOut hidden" style="position: absolute; display: block;">
-    <div style="display: block;">
+  <div id="popover5" class="popoverStyle fadeInOut hidden">
       <h1 class="_5popoverH1">Data</h1>
-    </div>
-    <div class="_5popoverbody">
+    <div class="popoverBodyStyle _5popoverbody">
       <div class="popoverNumber popoverGreenText">5</div>
-      <h2>Measurement Analytics
-      </h2>
-      <p>Digital data is also used for quality improvement activities, analytics, and measurement to improve patient care.
-      </p>
+      <h2>Measurement Analytics</h2>
+      <p>Digital data is also used for quality improvement activities, analytics, and measurement to improve patient care.</p>
     </div>
   </div>
 
   <!--Popover 6-->
-  <div id="popover6" class="fadeInOut hidden" style="position: absolute; display: block;">
-    <div style="display: block;">
-      <h1 class="_6popoverH1">Data</h1>
-    </div>
-    <div class="_6popoverbody">
+  <div id="popover6" class="popoverStyle fadeInOut hidden">
+    <h1 class="_6popoverH1">Data</h1>
+    <div class="popoverBodyStyle _6popoverbody">
       <div class="popoverNumber popoverGreenText">6</div>
-      <h2>Reporting
-      </h2>
-      <p>Digital quality measurement reporting advances CMS's goal of supporting high-quality care. In doing so, it uses the same data elements that support interoperability, quality improvement, clinical decision support, research, public health, and other use cases.
-      </p>
+      <h2>Reporting</h2>
+      <p>Digital quality measurement reporting advances CMS's goal of supporting high-quality care. In doing so, it uses the same data elements that support interoperability, quality improvement, clinical decision support, research, public health, and other use cases.</p>
     </div>
   </div>
   </div>
+
+</div>
+
+
 </body>
 <script>
-   function showonhover() { outcomesPopout.style.opacity = "1" };
-  function hideonhover() { outcomesPopout.style.opacity = "0" };
+  let outcomesButton = document.querySelector("#outcomesButton");
+  let outcomesPopout = document.querySelector("#outcomesPopout");
+  let outcomesArray = [outcomesButton, outcomesPopout]
+
+  outcomesArray.forEach(function(elem) {
+    elem.addEventListener('mouseover', function(){outcomesPopout.classList.remove('hidden');});
+    elem.addEventListener('mouseout', function(){outcomesPopout.classList.add('hidden');});
+    });
 
   const popovers = [
   document.querySelector("#popover2"),
